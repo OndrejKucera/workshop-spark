@@ -4,14 +4,14 @@ FROM openjdk:8
 MAINTAINER Ondrej Kucera <ondra.kuca@gmail.com>
 
 # Scala related variables.
-ARG SCALA_VERSION=2.12.2
+ARG SCALA_VERSION=2.11.12
 ARG SCALA_BINARY_ARCHIVE_NAME=scala-${SCALA_VERSION}
-ARG SCALA_BINARY_DOWNLOAD_URL=http://downloads.lightbend.com/scala/${SCALA_VERSION}/${SCALA_BINARY_ARCHIVE_NAME}.tgz
+ARG SCALA_BINARY_DOWNLOAD_URL=https://downloads.lightbend.com/scala/${SCALA_VERSION}/${SCALA_BINARY_ARCHIVE_NAME}.tgz
 
 # SBT related variables.
-ARG SBT_VERSION=0.13.15
+ARG SBT_VERSION=1.1.0
 ARG SBT_BINARY_ARCHIVE_NAME=sbt-${SBT_VERSION}
-ARG SBT_BINARY_DOWNLOAD_URL=https://dl.bintray.com/sbt/native-packages/sbt/${SBT_VERSION}/${SBT_BINARY_ARCHIVE_NAME}.tgz
+ARG SBT_BINARY_DOWNLOAD_URL=https://github.com/sbt/sbt/releases/download/v${SBT_VERSION}/${SBT_BINARY_ARCHIVE_NAME}.tgz
 
 # Maven related variables
 ARG MVN_VERSION=3.5.2
@@ -19,9 +19,9 @@ ARG MVN_BINARY_ARCHIVE_NAME=apache-maven-${MVN_VERSION}
 ARG MVN_BINARY_DOWNLOAD_URL=http://www-us.apache.org/dist/maven/maven-3/${MVN_VERSION}/binaries/${MVN_BINARY_ARCHIVE_NAME}-bin.tar.gz
 
 # Spark related variables.
-ARG SPARK_VERSION=2.2.0
+ARG SPARK_VERSION=2.3.0
 ARG SPARK_BINARY_ARCHIVE_NAME=spark-${SPARK_VERSION}-bin-hadoop2.7
-ARG SPARK_BINARY_DOWNLOAD_URL=http://d3kbcqa49mib13.cloudfront.net/${SPARK_BINARY_ARCHIVE_NAME}.tgz
+ARG SPARK_BINARY_DOWNLOAD_URL=http://apache.cs.utah.edu/spark/spark-${SPARK_VERSION}/${SPARK_BINARY_ARCHIVE_NAME}.tgz
 
 # Configure env variables for Scala, SBT and Spark.
 # Also configure PATH env variable to include binary folders of Java, Scala, SBT and Spark.
@@ -38,8 +38,8 @@ RUN apt-get -yqq update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
     wget -qO - ${SCALA_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/ && \
-    wget -qO - ${SBT_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/  && \
-    wget -qO - ${MVN_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/  && \
+    wget -qO - ${SBT_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/ && \
+    wget -qO - ${MVN_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/ && \
     wget -qO - ${SPARK_BINARY_DOWNLOAD_URL} | tar -xz -C /usr/local/ && \
     cd /usr/local/ && \
     ln -s ${SCALA_BINARY_ARCHIVE_NAME} scala && \

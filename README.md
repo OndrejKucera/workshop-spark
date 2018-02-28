@@ -1,4 +1,4 @@
-# Workshop: An Intorduction to Apache Spark - 101    
+# Workshop: An Introduction to Apache Spark - 101    
 ![](http://spark.apache.org/docs/latest/img/spark-logo-hd.png)
   
    When you will go thought the workshop you will get to know what is distributed computing, differences between approaches of MapReduce and Spark, basic Spark architecture. You will be able to start [Spark](https://spark.apache.org/) job in the standalone cluster and work with basic [Spark API](https://spark.apache.org/docs/latest/api/scala/index.html) - RDD and Datasets/DataFrames. The workshop focus only on Spark SQL module.

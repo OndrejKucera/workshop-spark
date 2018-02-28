@@ -14,14 +14,13 @@
   - ubuntu: https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
 ## Prepare the docker:
-#### build the docker image
+#### pull the docker image
   ```
-  docker build -t spark-docker .
+  docker pull ondrejkucera/spark-docker
   ```
 #### run docker container
-  {your-dir} stands for your absolute path to workshop-spark directory that you cloned.
   ```
-  docker run -it -p 4040:4040 -p 8080:8080 -p 8081:8081 -v {your-dir}:/root/workshop-spark -h spark --rm --name=spark spark-docker
+  docker run -it -p 4040:4040 -p 8080:8080 -p 8081:8081 -v `pwd`:/root/workshop-spark -h spark --rm --name=spark ondrejkucera/spark-docker
   ```
 
 ## Check the enviroment:
@@ -33,9 +32,9 @@
 #### Java:
   ```
   root@spark:~# java -version
-  openjdk version "1.8.0_141"
-  OpenJDK Runtime Environment (build 1.8.0_141-8u141-b15-1~deb9u1-b15)
-  OpenJDK 64-Bit Server VM (build 25.141-b15, mixed mode)
+  openjdk version "1.8.0_151"
+  OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-1~deb9u1-b12)
+  OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
   ```
 
 #### Scala:
@@ -52,7 +51,8 @@
   
 #### SBT:
   ```
-  Running `sbt about` will download and setup SBT on the image.
+  root@spark:~# sbt about
+  Getting org.scala-sbt sbt 1.1.0  (this may take some time)...
   ```
 
 #### Spark:
