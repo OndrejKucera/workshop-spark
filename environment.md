@@ -13,12 +13,8 @@
   - windows: https://docs.docker.com/docker-for-windows/install/
   - ubuntu: https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 
-## Prepare the docker:
-#### pull the docker image
-  ```
-  docker pull ondrejkucera/spark-docker
-  ```
-#### run docker container
+## Prepare the spark container:
+#### pull and run docker container:
   ```
   docker run -it -p 4040:4040 -p 8080:8080 -p 8081:8081 -v `pwd`:/root/workshop-spark -h spark --rm --name=spark ondrejkucera/spark-docker
   ```
@@ -59,14 +55,14 @@
   * master = local[*]	- Run Spark locally with as many worker threads as logical cores on your machine.
   ```
   root@spark:~# spark-shell
-  park context Web UI available at http://172.17.0.2:4040
-  Spark context available as 'sc' (master = local[*], app id = local-1509561912585).
+  Spark context Web UI available at http://spark:4040
+  Spark context available as 'sc' (master = local[*], app id = local-1519896490282).
   Spark session available as 'spark'.
   Welcome to
         ____              __
        / __/__  ___ _____/ /__
       _\ \/ _ \/ _ `/ __/  '_/
-     /___/ .__/\_,_/_/ /_/\_\   version 2.2.0
+     /___/ .__/\_,_/_/ /_/\_\   version 2.3.0
         /_/
 
   Using Scala version 2.11.8 (OpenJDK 64-Bit Server VM, Java 1.8.0_141)
