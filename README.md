@@ -1,19 +1,19 @@
 # Workshop: An Introduction to Apache Spark - 101    
 ![](http://spark.apache.org/docs/latest/img/spark-logo-hd.png)
   
-   When you will go thought the workshop you will get to know what is distributed computing, differences between approaches of MapReduce and Spark, basic Spark architecture. You will be able to start [Spark](https://spark.apache.org/) job in the standalone cluster and work with basic [Spark API](https://spark.apache.org/docs/latest/api/scala/index.html) - RDD and Datasets/DataFrames. The workshop focus only on Spark SQL module.
+   When you will go throught the workshop you will get to know what distributed computing is, differences between approaches of MapReduce and Spark, basic Spark architecture. You will be able to start [Spark](https://spark.apache.org/) job in the standalone cluster and work with basic [Spark API](https://spark.apache.org/docs/latest/api/scala/index.html) - RDD and Datasets/DataFrames. The workshop focus only on Spark SQL module.
 > **NOTE** This workshop was initially created for the [DevFest 2017](https://2017.devfest.cz/speakers/42) in Prague.
 ___
 
 ## Set the environment
-  As the first step you have to set your [Spark environment](environment.md) to get everything work. It includes docker installation and description how to run docker container where Apache Spark will be ready to use.
+  As the first step, you have to set your [Spark environment](environment.md) to get everything work. It includes docker installation and description how to run docker container where Apache Spark will be ready to use.
 ___
 
 ## Distributed computing
-  [Let's find out](distribution.md) why to choose distributed computing approach and what it actually means. 
+  [Let's find out](distribution.md) what distributed computing means and when actually choose this approach.
 ___
 ## Differences between MapReduce and Spark
-  Why isn't the MapReduce's approach good enough and what are differences from Spark? You can read [here](mapreduce.md).
+  Why isn't the MapReduce approach good enough and what are differences of Spark? You can read [here](mapreduce.md).
 ___
 
 ## Spark’s Basic Architecture
