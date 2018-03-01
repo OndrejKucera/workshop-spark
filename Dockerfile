@@ -1,4 +1,6 @@
 ## Sources - https://github.com/P7h/docker-spark
+#
+# Version: 1.1
 
 FROM openjdk:8
 MAINTAINER Ondrej Kucera <ondra.kuca@gmail.com>
