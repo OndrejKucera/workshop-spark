@@ -1,26 +1,11 @@
 # MapReduce vs. Spark
 
 ### What is MapReduce
- Conscept/approche?
- when? what is it? how it was created?
- 
- Algorimus: Map + shuffle fáze(partitioning + sort + group by) + Reduce
- 
- follows the map, shuffle, reduce algorithm using key-value pairs
- 
-- Průběh:
-při přenosu dat z mapu do reduce jsou data serializována a ukládána na disk, takže hodnoty musí být Writable
-a také klíč musí být WritableComaparable, protože v shuffle fází potřebujeme řadit
-
-- Combiner:
-mohou se provést dílčí agregace, předpočítání a až následně se výsledek pošle do reduceru. Musí mít stejný vstup a výstup. Může a nemusí se spustit. Snižuje se zátěž reduce nodu a vytížení sítě.
-
- the image and explanation?
- https://www.slideshare.net/esaliya/mapreduce-in-simple-terms/3-Sam_thought_of_drinking_the
- 
- https://www.slideshare.net/AbeArredondo/mapreduce-64145644
- 
- https://www.slideshare.net/JoaquinVanschoren/hadoop-tutorial-12877034
+ - 2004 [Google’s MapReduce paper](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+ - It was inspired by the map and reduce functions in functional programming: "Our abstraction is inspired by the map and reduce primitives present in Lisp and many other functional languages"
+ - Phases: **map(key, value)** + shuffle phase(partitioning + sorting + grouping) + **reduce(key, list<value>)** [slides 11-21](https://www.slideshare.net/JoaquinVanschoren/hadoop-tutorial-12877034)
+ - Data are always serialized and stored on the disk after the map phase.
+ - Note: after the map phase, **combiner** can be defined. it can help to reduce the amount of data written to disk, and transmitted over the network by aggregating partial results. Input and output of the combiner have to be identical. 
 
 ### Characteristics of the MapReduce
 In this section, it is considered **MapReduce** in a meaning of a default processing engine of **Hadoop**.
