@@ -8,12 +8,13 @@
  
  follows the map, shuffle, reduce algorithm using key-value pairs
  
- Průběh:
+- Průběh:
 při přenosu dat z mapu do reduce jsou data serializována a ukládána na disk, takže hodnoty musí být Writable
 a také klíč musí být WritableComaparable, protože v shuffle fází potřebujeme řadit
-Combiner: mohou se provést dílčí agregace, předpočítání a až následně se výsledek pošle do reduceru. Musí mít stejný vstup a výstup. Může a nemusí se spustit. Snižuje se zátěž reduce nodu a vytížení sítě.
 
- 
+- Combiner:
+mohou se provést dílčí agregace, předpočítání a až následně se výsledek pošle do reduceru. Musí mít stejný vstup a výstup. Může a nemusí se spustit. Snižuje se zátěž reduce nodu a vytížení sítě.
+
  the image and explanation?
  https://www.slideshare.net/esaliya/mapreduce-in-simple-terms/3-Sam_thought_of_drinking_the
  
