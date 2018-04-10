@@ -9,7 +9,7 @@ For reasonable small datasets, we can use R/Python/Matlab and execute the parall
   - Workers/threads independently and parallelly work with data
   - When the work is done, combine the results
 
-In this case, we have only one machine which runs paralelly more threads. Data are partitioned in memory. But what if for example our data doesn't fit into a memory? When we need more memory we can [scale](notes.md#Scalability) by adding more machines.
+In this case, we have only one machine which runs paralelly more threads. Data are partitioned in memory. But what if for example, our data doesn't fit into the memory? Then we can [scale](notes.md#Scalability) by adding more machines with memory.
 
 ### Distributed computing
   - Split data over all nodes
