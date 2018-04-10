@@ -10,25 +10,25 @@
 ### Characteristics of the MapReduce
 In this section, it is considered **MapReduce** in a meaning of a default processing engine of **Hadoop**.
 
-  Charachteristics:
+  Characteristics:
    * work with permanent storage -> handle enormous datasets
    * less expensive hardware -> since it doesn't need that much memory
    * incredible scalability potential
    * Hadoop has an extensive ecosystem
    * fault tolerance 
 
-It is best suited for handling very large data that sit on permament storage.
+It is best suited for handling very large data that sit in permanent storage.
 
-But there are some disatvatages:
+But there are some disadvantages:
   * constrained by two stages (map and reduce)
-  * uncofortable work with API -> skilled developer
+  * uncomfortable work with API -> skilled developer
   * heavily leverages permanent storage, reading and writing multiple times per task, it tends to be fairly slow
 
 It has to be said that many concepts are good even today and Hadoop is frequently used as a building block for other software in many frameworks.
 
 ### What about Apache Spark?
-All what it is mentioned plus ...
-  * confortable API
+All what was mentioned plus ...
+  * comfortable API
   * not only two stages
   * it is possible create data flow
   * work with operation memory -> better performace
