@@ -5,6 +5,7 @@
  when? what is it? how it was created?
  
  Algorimus: Map + shuffle fáze(partitioning + sort + group by) + Reduce
+ 
  follows the map, shuffle, reduce algorithm using key-value pairs
  
  Průběh:
