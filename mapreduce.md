@@ -7,7 +7,7 @@
  - Data are always serialized and stored on the disk after the map phase.
  - Note: after the map phase, **combiner** can be defined. it can help to reduce the amount of data written to disk, and transmitted over the network by aggregating partial results. Input and output of the combiner have to be identical. 
 
-### Characteristics of the MapReduce
+### Characteristics of the Hadoop MapReduce
 In this section, it is considered **MapReduce** in a meaning of a default processing engine of **Hadoop**.
 
   Characteristics:
